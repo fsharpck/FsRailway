@@ -9,3 +9,8 @@ steps:
     cd .\FsRailway
     dotnet build
   displayName: 'Build'
+
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    packagesToPack: '**/*.fsproj'
